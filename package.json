@@ -17,6 +17,7 @@
     "moment-timezone": "^0.5.17",
     "mysql2": "^1.6.4",
     "nodemw": "^0.12.1",
+    "node-fetch": "^2.3.0",
     "random-js": "^1.0.8",
     "random-puppy": "^1.1.0",
     "seedrandom": "^2.4.4",
