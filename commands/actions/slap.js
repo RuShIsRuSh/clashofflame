@@ -1,0 +1,51 @@
+const Command = require('../../struct/custom/Command');
+const request = require('snekfetch');
+const Discord = require('discord.js');
+//const config = require('../../../config.json');
+
+class SlapCommand extends Command {
+    constructor() {
+        super('slap', {
+            aliases: ['slap'],
+            channelRestriction: 'guild',
+            args: [{
+                id: 'input',
+                type: 'string',
+                match: 'rest'
+            }],
+          	category:'ACTIONS',
+			      description:{
+			        content:"Slap that inadequate fool",
+			        usage:['r!slap <tag>','r!slap @Example#1234']
+        }
+        });
+    }
+
+    exec(message, args) {
+        if (!args.input) {
+            request.get('https://weebs.cf/random/slap').then(body => {
+                const embed = this.client.util.embed()
+                    .setDescription(`**${this.client.user.username}** slaps **${message.author.username}**`)
+                    .setImage(body.text)
+                    .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
+                    //.setColor(config.color.second);
+                message.channel.send({
+                    embed: embed
+                });
+            });
+        } else {
+            request.get('https://weebs.cf/random/slap').then(body => {
+                const embed = this.client.util.embed()
+                    .setDescription(`**${message.author.username}** slaps **${args.input}**`)
+                    .setImage(body.text)
+                    .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
+                    //.setColor(config.color.second);
+                message.channel.send({
+                    embed: embed
+                });
+            });
+        }
+    }
+}
+
+module.exports = SlapCommand;

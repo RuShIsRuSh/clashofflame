@@ -1,0 +1,59 @@
+{
+  "name": "eros-bot",
+  "version": "1.6.0",
+  "description": "Eros Bot Public",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "booru": "^1.3.4",
+    "bufferutil": "^4.0.0",
+    "chalk": "^2.4.1",
+    "discord-akairo": "github:1Computer1/discord-akairo#master",
+    "discord-paginationembed": "github:gazmull/discord-paginationembed",
+    "discord.js": "github:discordjs/discord.js",
+    "dotenv": "^6.1.0",
+    "infobox-parser": "^3.0.3",
+    "js-yaml": "^3.10.0",
+    "moment-timezone": "^0.5.17",
+    "mysql2": "^1.6.4",
+    "nodemw": "^0.12.1",
+    "random-js": "^1.0.8",
+    "random-puppy": "^1.1.0",
+    "seedrandom": "^2.4.4",
+    "sequelize": "^4.37.10",
+    "snekfetch": "^4.0.4",
+    "sqlite": "^3.0.0",
+    "twit": "^2.2.10",
+    "yarn": "^1.12.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": "*"
+  },
+  "scripts": {
+    "test": "eslint --ignore-path .gitignore .",
+    "lint": "eslint --ignore-path .gitignore . --fix",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gazmull/eros-bot.git"
+  },
+  "keywords": [
+    "kamihime",
+    "project",
+    "kamihime",
+    "discord",
+    "bot",
+    "discord.js",
+    "akairo",
+    "kamihime",
+    "database"
+  ],
+  "author": "gazmull (thegzm.space)",
+  "license": "MIT",
+  "homepage": "https://github.com/gazmull/eros-bot#readme"
+}

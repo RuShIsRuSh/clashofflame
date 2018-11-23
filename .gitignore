@@ -1,0 +1,18 @@
+#NPM
+node_modules/
+package-lock.json
+
+#Yarn
+yarn.lock
+
+#Private Source
+
+
+provider/Database.js
+provider/countdown.json
+provider/models/kamihime.js
+commands/fun/
+commands/kamihime/test.js
+
+#VSCode
+.vscode
